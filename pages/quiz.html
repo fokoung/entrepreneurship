@@ -65,27 +65,40 @@
 </head>
 <body class="text-gray-800">
 
-    <nav class="sticky top-0 bg-white/90 backdrop-blur-md shadow-sm z-40">
-      <div class="container mx-auto px-4">
+<!-- Navigation Bar HTML -->
+<nav class="sticky top-0 bg-white/90 backdrop-blur-md shadow-sm z-40">
+    <div class="container mx-auto px-4">
         <div class="flex justify-between items-center py-3">
-          <a href="#" class="flex items-center gap-2">
-            <img src="https://placehold.co/50x50/007BFF/FFFFFF?text=G" alt="Guardians of the Planet Logo" class="w-10 h-10 rounded-full">
-            <span class="font-brand-title text-2xl text-brand-primary">GUARDIANS OF THE PLANET</span>
-          </a>
-          <div class="hidden md:flex items-center space-x-6">
-            <a href="#missions" class="text-gray-600 hover:text-brand-primary font-bold">Missions</a>
-            <a href="#certification" class="text-gray-600 hover:text-brand-primary font-bold">Certifications</a>
-            <a href="#partners" class="text-gray-600 hover:text-brand-primary font-bold">Partners</a>
-            <a href="challenge_list.html" class="text-gray-600 hover:text-brand-primary font-bold">Challenges</a>
-            <a href="shopping_cart.html" class="text-gray-600 hover:text-brand-primary font-bold">Shop</a>
-            <a href="achievement.html" class="bg-brand-secondary text-gray-900 px-5 py-2 rounded-full font-bold hover:bg-yellow-400 transition-colors flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg>
-                <span>My Profile</span>
+            <a href="../index.html" class="flex items-center gap-2">
+                <img src="https://placehold.co/50x50/007BFF/FFFFFF?text=G" alt="Guardians of the Planet Logo" class="w-10 h-10 rounded-full">
+                <span class="font-brand-title text-2xl text-brand-primary">GUARDIANS OF THE PLANET</span>
             </a>
-          </div> 
+            <!-- Hamburger Menu (Mobile) -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-600 hover:text-brand-primary">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+            <!-- Regular Menu (Desktop) -->
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="../index.html#missions" class="text-gray-600 hover:text-brand-primary font-bold">Missions</a>
+                <a href="challenge_list.html" class="text-gray-600 hover:text-brand-primary font-bold">Challenges</a>
+                <a href="partner_1.html" class="text-gray-600 hover:text-brand-primary font-bold">Shop</a>
+                <a href="achievement.html" class="bg-brand-secondary text-gray-900 px-5 py-2 rounded-full font-bold hover:bg-yellow-400 transition-colors flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg>
+                    <span>My Profile</span>
+                </a>
+            </div>
         </div>
-      </div>
-    </nav>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden">
+        <a href="../index.html#missions" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Missions</a>
+        <a href="challenge_list.html" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Challenges</a>
+        <a href="partner_1.html" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Shop</a>
+        <a href="achievement.html" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">My Profile</a>
+    </div>
+</nav>
 
     <!-- Header -->
     <header class="quiz-header text-white text-center py-10 px-4">
@@ -201,6 +214,16 @@
 
             resultsSection.classList.remove('hidden');
             resultsSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            var mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+            }
         });
     </script>
 </body>

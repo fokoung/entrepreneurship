@@ -332,3 +332,14 @@ html {
 .quantity-btn:hover {
     background-color: #e5e7eb; /* gray-200 */
 }
+/* Mobile Menu Styles */
+#mobile-menu {
+    background-color: white;
+    border-top: 1px solid #e5e7eb;
+}
+
+@media (min-width: 768px) {
+    #menu-toggle {
+        display: none;
+    }
+}

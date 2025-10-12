@@ -1,28 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Function to fetch and insert HTML components
-    const loadComponent = (selector, url) => {
-        fetch(url)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`Failed to load ${url}: ${response.statusText}`);
-                }
-                return response.text();
-            })
-            .then(data => {
-                const element = document.querySelector(selector);
-                if (element) {
-                    element.innerHTML = data;
-                } else {
-                    console.error(`Placeholder element with selector "${selector}" not found.`);
-                }
-            })
-            .catch(error => console.error('Error loading component:', error));
-    };
-
-    // Load navbar and footer into their placeholders
-    loadComponent("#navbar-placeholder", "../components/navbar.html");
-    loadComponent("#footer-placeholder", "../components/footer.html");
-});
 
 const sdgData = [
     { id: 1, title: 'No Poverty', color: '#E5243B', description: "Ensure that no one is too poor to eat, have a home, or go to school.", challenge: "Donate a toy or a piece of clothing you no longer use to a charity." },
