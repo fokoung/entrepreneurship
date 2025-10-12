@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDG 1 Quiz: The Final Challenge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .quiz-header {
+            background-color: #E5243B; /* SDG 1 Color */
+        }
+        .question-card {
+            background-color: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .quiz-option {
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .quiz-option:hover {
+            background-color: #fef2f2; /* red-50 */
+        }
+        .results-card {
+            background-color: #4c1d95; /* deep-purple */
+            color: white;
+            border-radius: 1.5rem;
+            animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+        @keyframes popIn {
+            0% { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+
+                /* Custom Brand Fonts */
+        .font-brand-title {
+            font-family: 'Bangers', cursive;
+            letter-spacing: 2px;
+        }
+        .font-brand-heading {
+             font-family: 'Nunito Sans', sans-serif;
+             font-weight: 900;
+        }
+
+        /* Custom Brand Colors */
+        .bg-brand-primary { background-color: #007BFF; } /* Bright Blue */
+        .text-brand-primary { color: #007BFF; }
+        .bg-brand-secondary { background-color: #FFC107; } /* Sunny Yellow */
+        .text-brand-secondary { color: #FFC107; }
+        .bg-brand-accent { background-color: #28A745; } /* Eco Green */
+        .text-brand-accent { color: #28A745; }
+        .bg-brand-light { background-color: #F0F7FF; }
+        .border-brand-accent { border-color: #28A745; }
+        .border-brand-secondary { border-color: #FFC107; }
+        .border-brand-purple { border-color: #6f42c1; }
+
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <nav class="sticky top-0 bg-white/90 backdrop-blur-md shadow-sm z-40">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-3">
+          <a href="#" class="flex items-center gap-2">
+            <img src="https://placehold.co/50x50/007BFF/FFFFFF?text=G" alt="Guardians of the Planet Logo" class="w-10 h-10 rounded-full">
+            <span class="font-brand-title text-2xl text-brand-primary">GUARDIANS OF THE PLANET</span>
+          </a>
+          <div class="hidden md:flex items-center space-x-6">
+            <a href="#missions" class="text-gray-600 hover:text-brand-primary font-bold">Missions</a>
+            <a href="#certification" class="text-gray-600 hover:text-brand-primary font-bold">Certifications</a>
+            <a href="#partners" class="text-gray-600 hover:text-brand-primary font-bold">Partners</a>
+            <a href="challenge_list.html" class="text-gray-600 hover:text-brand-primary font-bold">Challenges</a>
+            <a href="shopping_cart.html" class="text-gray-600 hover:text-brand-primary font-bold">Shop</a>
+            <a href="achievement.html" class="bg-brand-secondary text-gray-900 px-5 py-2 rounded-full font-bold hover:bg-yellow-400 transition-colors flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg>
+                <span>My Profile</span>
+            </a>
+          </div> 
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="quiz-header text-white text-center py-10 px-4">
+        <h1 class="text-4xl md:text-5xl font-bold">📜 SDG 1 Quiz: The Final Challenge 📜</h1>
+        <p class="mt-4 text-lg max-w-2xl mx-auto">Time to show what you've learned, Guardian! Answer all the questions to earn your certificate.</p>
+    </header>
+
+    <!-- Main Quiz Content -->
+    <main class="container mx-auto p-4 md:p-8">
+        <form id="quiz-form">
+            <div class="space-y-8">
+                <!-- Questions 1-20 will be dynamically inserted here by JS -->
+            </div>
+            <button type="submit" class="mt-8 w-full bg-green-600 text-white font-bold py-4 px-8 rounded-full text-xl hover:bg-green-700 transition-transform transform hover:scale-105">
+                Submit My Answers!
+            </button>
+        </form>
+
+        <!-- Results Section (hidden by default) -->
+        <section id="results-section" class="hidden text-center p-6 md:p-10 mt-10 results-card">
+            <h2 id="results-title" class="text-4xl font-bold mb-4"></h2>
+            <p id="results-score" class="text-6xl font-bold mb-4"></p>
+            <p id="results-message" class="text-xl mb-6 max-w-3xl mx-auto"></p>
+            <button id="certificate-button" class="bg-yellow-400 text-gray-900 font-bold py-3 px-8 rounded-full text-lg cursor-pointer hover:bg-yellow-500 transition-transform transform hover:scale-110">
+                Claim Your Certificate!
+            </button>
+        </section>
+
+    </main>
+
+    <script>
+        const quizData = [
+            { question: "What is the main goal of SDG 1?", options: ["No Hunger", "No Poverty", "Good Health"], answer: "No Poverty" },
+            { question: "Poverty means not having enough...", options: ["Toys", "Money for basic needs", "Friends"], answer: "Money for basic needs" },
+            { question: "Which of these is a 'basic need'?", options: ["A fancy car", "A safe place to live", "A new phone"], answer: "A safe place to live" },
+            { question: "What kind of food helps our brains and bodies grow?", options: ["Candy", "Nutritious food", "Fast food"], answer: "Nutritious food" },
+            { question: "Why is a safe home important?", options: ["To store video games", "To protect from rain and cold", "To have big parties"], answer: "To protect from rain and cold" },
+            { question: "Clean toilets help to...", options: ["Save water", "Stop sickness from spreading", "Look nice"], answer: "Stop sickness from spreading" },
+            { question: "What does education give us?", options: ["Tools to build our dreams", "More time to play", "Lots of homework"], answer: "Tools to build our dreams" },
+            { question: "Ending poverty helps people...", options: ["Become famous", "Unlock their superpowers", "Travel the world"], answer: "Unlock their superpowers" },
+            { question: "A child with a good education might grow up to be...", options: ["Only a teacher", "Anything they dream of", "A video game player"], answer: "Anything they dream of" },
+            { question: "When adults have good jobs, it helps build stronger...", options: ["Muscles", "Communities", "Houses"], answer: "Communities" },
+            { question: "SDG 1 is about making the world...", options: ["Richer", "Fairer", "Bigger"], answer: "Fairer" },
+            { question: "What is a simple way you can help?", options: ["Buy more things", "Donate clothes you've outgrown", "Keep everything for yourself"], answer: "Donate clothes you've outgrown" },
+            { question: "The 'Power of Not Wasting' means you should...", options: ["Leave the lights on", "Save water and electricity", "Throw away leftovers"], answer: "Save water and electricity" },
+            { question: "What is 'empathy'?", options: ["Being good at math", "Understanding how someone else feels", "Running very fast"], answer: "Understanding how someone else feels" },
+            { question: "How can you show the 'Power of Kindness'?", options: ["By being the best at games", "By inviting someone new to play", "By having the most toys"], answer: "By inviting someone new to play" },
+            { question: "Why is it important to learn about other cultures?", options: ["So you can travel", "To build empathy", "To learn new languages"], answer: "To build empathy" },
+            { question: "What is a 'foundation' for a good life?", options: ["Having lots of money", "Having your basic needs met", "Being famous"], answer: "Having your basic needs met" },
+            { question: "Ending poverty helps make everyone...", options: ["Taller and stronger", "Healthier and happier", "Smarter and faster"], answer: "Healthier and happier" },
+            { question: "What is a small action that makes a huge difference?", options: ["Turning off a light", "Buying a new toy", "Watching TV"], answer: "Turning off a light" },
+            { question: "Being a Guardian of the Planet means you use your powers...", options: ["Only on weekends", "To show off", "Every day in small ways"], answer: "Every day in small ways" }
+        ];
+
+        const quizForm = document.getElementById('quiz-form');
+        const quizContainer = quizForm.querySelector('.space-y-8');
+
+        // Populate Quiz
+        quizData.forEach((item, index) => {
+            const questionId = `q${index + 1}`;
+            const optionsHtml = item.options.map(option => `
+                <label class="quiz-option block p-4 border-2 rounded-lg cursor-pointer">
+                    <input type="radio" name="${questionId}" value="${option}" class="mr-3" required>
+                    ${option}
+                </label>
+            `).join('');
+
+            const questionHtml = `
+                <div class="question-card p-6 md:p-8">
+                    <p class="font-bold text-xl mb-4">${index + 1}. ${item.question}</p>
+                    <div class="space-y-3">${optionsHtml}</div>
+                </div>
+            `;
+            quizContainer.innerHTML += questionHtml;
+        });
+
+        // Handle Submission
+        quizForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            let score = 0;
+            quizData.forEach((item, index) => {
+                const questionId = `q${index + 1}`;
+                const selectedOption = quizForm.querySelector(`input[name="${questionId}"]:checked`);
+                if (selectedOption && selectedOption.value === item.answer) {
+                    score++;
+                }
+            });
+
+            const percentage = (score / quizData.length) * 100;
+            
+            const resultsSection = document.getElementById('results-section');
+            const resultsTitle = document.getElementById('results-title');
+            const resultsScore = document.getElementById('results-score');
+            const resultsMessage = document.getElementById('results-message');
+            const certificateButton = document.getElementById('certificate-button');
+
+            resultsScore.textContent = `${percentage.toFixed(0)}%`;
+
+            if (percentage === 100) {
+                resultsTitle.textContent = "🏆 Certificate of Excellence! 🏆";
+                resultsMessage.textContent = "PERFECT SCORE! You are a true expert on fighting poverty. Your knowledge is as bright as your heart. Well done, Guardian!";
+                certificateButton.textContent = "Claim Your Excellence Certificate!";
+            } else if (percentage >= 80) {
+                resultsTitle.textContent = "🎉 Mission Passed! 🎉";
+                resultsMessage.textContent = "Congratulations! You have successfully passed the final challenge and shown you have what it takes to be a Guardian of the Planet.";
+                certificateButton.textContent = "Claim Your Certificate!";
+            } else {
+                resultsTitle.textContent = "🤔 Keep Trying, Guardian! 🤔";
+                resultsMessage.textContent = `You scored ${percentage.toFixed(0)}%. You need at least 80% to pass. Review the course material and try the challenge again! You can do it!`;
+                certificateButton.style.display = 'none';
+            }
+
+            resultsSection.classList.remove('hidden');
+            resultsSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

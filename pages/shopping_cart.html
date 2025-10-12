@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - BB Bin Wizards</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f3f4f6; /* gray-100 */
+        }
+        .quantity-btn {
+            transition: background-color 0.2s, color 0.2s;
+        }
+        .quantity-btn:hover {
+            background-color: #e5e7eb; /* gray-200 */
+        }
+
+
+                /* Custom Brand Fonts */
+        .font-brand-title {
+            font-family: 'Bangers', cursive;
+            letter-spacing: 2px;
+        }
+        .font-brand-heading {
+             font-family: 'Nunito Sans', sans-serif;
+             font-weight: 900;
+        }
+
+        /* Custom Brand Colors */
+        .bg-brand-primary { background-color: #007BFF; } /* Bright Blue */
+        .text-brand-primary { color: #007BFF; }
+        .bg-brand-secondary { background-color: #FFC107; } /* Sunny Yellow */
+        .text-brand-secondary { color: #FFC107; }
+        .bg-brand-accent { background-color: #28A745; } /* Eco Green */
+        .text-brand-accent { color: #28A745; }
+        .bg-brand-light { background-color: #F0F7FF; }
+        .border-brand-accent { border-color: #28A745; }
+        .border-brand-secondary { border-color: #FFC107; }
+        .border-brand-purple { border-color: #6f42c1; }
+
+    </style>
+</head>
+<body class="text-gray-800">
+
+     <!-- Navbar -->
+    <nav class="sticky top-0 bg-white/90 backdrop-blur-md shadow-sm z-40">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-3">
+          <a href="#" class="flex items-center gap-2">
+            <img src="https://placehold.co/50x50/007BFF/FFFFFF?text=G" alt="Guardians of the Planet Logo" class="w-10 h-10 rounded-full">
+            <span class="font-brand-title text-2xl text-brand-primary">GUARDIANS OF THE PLANET</span>
+          </a>
+          <div class="hidden md:flex items-center space-x-6">
+            <a href="#missions" class="text-gray-600 hover:text-brand-primary font-bold">Missions</a>
+            <a href="#certification" class="text-gray-600 hover:text-brand-primary font-bold">Certifications</a>
+            <a href="#partners" class="text-gray-600 hover:text-brand-primary font-bold">Partners</a>
+            <a href="challenge_list.html" class="text-gray-600 hover:text-brand-primary font-bold">Challenges</a>
+            <a href="shopping_cart.html" class="text-gray-600 hover:text-brand-primary font-bold">Shop</a>
+            <a href="achievement.html" class="bg-brand-secondary text-gray-900 px-5 py-2 rounded-full font-bold hover:bg-yellow-400 transition-colors flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg>
+                <span>My Profile</span>
+            </a>
+          </div> 
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-6">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 text-center">
+                🛒 Your Shopping Cart 🛒
+            </h1>
+            <p class="text-center text-gray-500 mt-2">Let's get these friendly bins to their new home!</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <div class="flex flex-col lg:flex-row gap-12">
+
+            <!-- Cart Items -->
+            <div id="cart-items-container" class="flex-grow">
+                <div class="space-y-6">
+                    
+                    <!-- Example Cart Item 1 -->
+                    <div class="cart-item bg-white rounded-2xl shadow-md p-6 flex flex-col sm:flex-row items-center gap-6">
+                        <img src="https://placehold.co/150x150/2196F3/FFFFFF?text=Pipa" alt="Pipa the Paper Eater Bin" class="w-32 h-32 rounded-lg object-cover">
+                        <div class="flex-grow text-center sm:text-left">
+                            <h2 class="text-xl font-bold">Pipa the Paper Eater</h2>
+                            <p class="text-gray-500">The perfect paper pal!</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <button class="quantity-btn minus-btn w-10 h-10 rounded-full border font-bold text-lg">-</button>
+                            <span class="quantity-value text-xl font-bold w-12 text-center" data-quantity="1">1</span>
+                            <button class="quantity-btn plus-btn w-10 h-10 rounded-full border font-bold text-lg">+</button>
+                        </div>
+                        <div class="text-xl font-bold w-24 text-center">
+                            €<span class="item-price" data-price="24.99">24.99</span>
+                        </div>
+                        <button class="remove-btn text-red-500 hover:text-red-700 font-semibold">Remove</button>
+                    </div>
+
+                    <!-- Example Cart Item 2 -->
+                    <div class="cart-item bg-white rounded-2xl shadow-md p-6 flex flex-col sm:flex-row items-center gap-6">
+                        <img src="https://placehold.co/150x150/FFC107/FFFFFF?text=Plasto" alt="Plasto the Bottle Gobbler Bin" class="w-32 h-32 rounded-lg object-cover">
+                        <div class="flex-grow text-center sm:text-left">
+                            <h2 class="text-xl font-bold">Plasto the Bottle Gobbler</h2>
+                            <p class="text-gray-500">Ready to gobble up plastic!</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <button class="quantity-btn minus-btn w-10 h-10 rounded-full border font-bold text-lg">-</button>
+                            <span class="quantity-value text-xl font-bold w-12 text-center" data-quantity="2">2</span>
+                            <button class="quantity-btn plus-btn w-10 h-10 rounded-full border font-bold text-lg">+</button>
+                        </div>
+                        <div class="text-xl font-bold w-24 text-center">
+                             €<span class="item-price" data-price="24.99">49.98</span>
+                        </div>
+                        <button class="remove-btn text-red-500 hover:text-red-700 font-semibold">Remove</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="lg:w-96">
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <h2 class="text-2xl font-bold text-center mb-6">Order Summary</h2>
+                    <div class="space-y-4">
+                        <div class="flex justify-between text-lg">
+                            <span>Subtotal</span>
+                            <span id="summary-subtotal" class="font-semibold">€74.97</span>
+                        </div>
+                        <div class="flex justify-between text-lg">
+                            <span>Shipping</span>
+                            <span id="summary-shipping" class="font-semibold">€5.00</span>
+                        </div>
+                        <div class="border-t my-4"></div>
+                        <div class="flex justify-between text-2xl font-bold">
+                            <span>Total</span>
+                            <span id="summary-total">€79.97</span>
+                        </div>
+                    </div>
+                    <button class="w-full mt-8 bg-green-600 text-white font-bold py-4 px-6 rounded-full text-xl hover:bg-green-700 transition-colors">
+                        Proceed to Checkout
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Purchase History Section -->
+        <section id="purchase-history" class="mt-20 pt-10 border-t-2 border-gray-200">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-10">
+                🕰️ Your Purchase History 🕰️
+            </h2>
+            <div class="space-y-6 max-w-4xl mx-auto">
+                
+                <!-- History Item 1 -->
+                <div class="bg-white rounded-2xl shadow-md p-6 flex flex-col sm:flex-row items-center gap-6 opacity-80">
+                    <img src="https://placehold.co/100x100/8BC34A/FFFFFF?text=Orgo" alt="Orgo the Garden Helper Bin" class="w-24 h-24 rounded-lg object-cover">
+                    <div class="flex-grow text-center sm:text-left">
+                        <h3 class="text-xl font-bold">Orgo the Garden Helper</h3>
+                        <p class="text-gray-500">Purchased on: September 15, 2025</p>
+                    </div>
+                    <div class="text-lg font-bold text-gray-600">
+                        €29.99
+                    </div>
+                    <button class="bg-blue-500 text-white font-semibold py-2 px-5 rounded-full hover:bg-blue-600 transition-colors">
+                        Buy Again
+                    </button>
+                </div>
+
+                <!-- History Item 2 -->
+                 <div class="bg-white rounded-2xl shadow-md p-6 flex flex-col sm:flex-row items-center gap-6 opacity-80">
+                    <img src="https://placehold.co/100x100/2196F3/FFFFFF?text=Pipa" alt="Pipa the Paper Eater Bin" class="w-24 h-24 rounded-lg object-cover">
+                    <div class="flex-grow text-center sm:text-left">
+                        <h3 class="text-xl font-bold">Pipa the Paper Eater</h3>
+                        <p class="text-gray-500">Purchased on: August 02, 2025</p>
+                    </div>
+                    <div class="text-lg font-bold text-gray-600">
+                        €24.99
+                    </div>
+                    <button class="bg-blue-500 text-white font-semibold py-2 px-5 rounded-full hover:bg-blue-600 transition-colors">
+                        Buy Again
+                    </button>
+                </div>
+                
+            </div>
+        </section>
+
+    </main>
+
+      <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12">
+        <div class="container mx-auto px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About Section -->
+                <div class="md:col-span-1">
+                    <h3 class="font-brand-title text-xl text-brand-secondary mb-4">Guardians of the Planet</h3>
+                    <p class="text-gray-400">Empowering the next generation to learn about the Sustainable Development Goals and take action for a better world.</p>
+                </div>
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-brand-heading text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#missions" class="text-gray-400 hover:text-white">Missions</a></li>
+                        <li><a href="#certification" class="text-gray-400 hover:text-white">Certifications</a></li>
+                        <li><a href="#partners" class="text-gray-400 hover:text-white">Partners</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Your Achievements</a></li>
+                    </ul>
+                </div>
+                <!-- Support -->
+                 <div>
+                    <h4 class="font-brand-heading text-lg mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <!-- Follow Us -->
+                <div>
+                    <h4 class="font-brand-heading text-lg mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.345 2.525c.636-.247 1.363-.416 2.427-.465C9.795 2.013 10.148 2 12.315 2zm-1.118 4.869A5.25 5.25 0 115.25 12a5.25 5.25 0 015.947-5.131zm-1.848 8.525A3.75 3.75 0 1112 8.25a3.75 3.75 0 01-2.663 6.394zm6.406-8.56a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z" clip-rule="evenodd" /></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Guardians of the Planet. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cartItemsContainer = document.getElementById('cart-items-container');
+
+            function updateSummary() {
+                let subtotal = 0;
+                const cartItems = document.querySelectorAll('#cart-items-container .cart-item');
+                
+                if (cartItems.length === 0) {
+                    subtotal = 0;
+                } else {
+                    cartItems.forEach(item => {
+                        const priceElement = item.querySelector('.item-price');
+                        subtotal += parseFloat(priceElement.textContent);
+                    });
+                }
+
+
+                const shipping = cartItems.length > 0 ? 5.00 : 0;
+                const total = subtotal + shipping;
+
+                document.getElementById('summary-subtotal').textContent = `€${subtotal.toFixed(2)}`;
+                document.getElementById('summary-shipping').textContent = `€${shipping.toFixed(2)}`;
+                document.getElementById('summary-total').textContent = `€${total.toFixed(2)}`;
+            }
+
+            function updateItemPrice(item) {
+                const quantityElement = item.querySelector('.quantity-value');
+                const priceElement = item.querySelector('.item-price');
+                const basePrice = parseFloat(priceElement.dataset.price);
+                const quantity = parseInt(quantityElement.dataset.quantity);
+                const newPrice = basePrice * quantity;
+                priceElement.textContent = newPrice.toFixed(2);
+                updateSummary();
+            }
+
+            cartItemsContainer.addEventListener('click', (e) => {
+                const item = e.target.closest('.cart-item');
+                if (!item) return;
+                
+                const quantityElement = item.querySelector('.quantity-value');
+                let quantity = parseInt(quantityElement.dataset.quantity);
+
+                // Plus button
+                if (e.target.classList.contains('plus-btn')) {
+                    quantity++;
+                    quantityElement.dataset.quantity = quantity;
+                    quantityElement.textContent = quantity;
+                    updateItemPrice(item);
+                }
+
+                // Minus button
+                if (e.target.classList.contains('minus-btn')) {
+                    if (quantity > 1) {
+                        quantity--;
+                        quantityElement.dataset.quantity = quantity;
+                        quantityElement.textContent = quantity;
+                        updateItemPrice(item);
+                    }
+                }
+
+                // Remove button
+                if (e.target.classList.contains('remove-btn')) {
+                    item.remove();
+                    updateSummary();
+                }
+            });
+
+            // Initial calculation
+            updateSummary();
+        });
+    </script>
+
+</body>
+</html>
+

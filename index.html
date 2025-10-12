@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardians of the Planet - Learn the SDGs!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;900&family=Bangers&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 bg-white/90 backdrop-blur-md shadow-sm z-40">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-3">
+          <a href="#" class="flex items-center gap-2">
+            <img src="https://placehold.co/50x50/007BFF/FFFFFF?text=G" alt="Guardians of the Planet Logo" class="w-10 h-10 rounded-full">
+            <span class="font-brand-title text-2xl text-brand-primary">GUARDIANS OF THE PLANET</span>
+          </a>
+          <div class="hidden md:flex items-center space-x-6">
+            <a href="index.html" class="text-gray-600 hover:text-brand-primary font-bold">Missions</a>
+            <a href="#certification" class="text-gray-600 hover:text-brand-primary font-bold">Certifications</a>
+            <a href="#partners" class="text-gray-600 hover:text-brand-primary font-bold">Partners</a>
+            <a href="pages/challenge_list.html" class="text-gray-600 hover:text-brand-primary font-bold">Challenges</a>
+            <a href="pages/shopping_cart.html" class="text-gray-600 hover:text-brand-primary font-bold">Shop</a>
+            <a href="pages/achievement.html" class="bg-brand-secondary text-gray-900 px-5 py-2 rounded-full font-bold hover:bg-yellow-400 transition-colors flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg>
+                <span>My Profile</span>
+            </a>
+          </div> 
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="text-center py-16 bg-white relative overflow-hidden">
+        <div class="container mx-auto relative z-10">
+            
+            <h1 class="font-brand-title text-5xl md:text-7xl text-brand-primary">Guardians of the Planet</h1>
+            <p class="font-brand-heading text-2xl md:text-3xl text-gray-600 mt-4">Small Hands, Big Impact!</p>
+            <p class="text-lg md:text-xl text-gray-500 mt-2">Ready to take on 17 missions to save the world?</p>
+        </div>
+        <div class="absolute -bottom-1/2 left-0 w-full h-full bg-brand-light" style="clip-path: ellipse(80% 50% at 50% 100%);"></div>
+    </header>
+
+    <!-- Certification Section -->
+    <section id="certification" class="bg-brand-light py-12 md:py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="font-brand-heading text-3xl md:text-4xl text-gray-800 mb-2">Become a Certified Guardian!</h2>
+            <p class="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">After exploring the missions, test your knowledge and receive awesome certificates to prove your commitment.</p>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Offer Card 1: Free -->
+                <div class="offer-card bg-white border-4 border-brand-accent rounded-2xl p-6 shadow-lg flex flex-col">
+                    <div class="flex-grow">
+                        <div class="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                           <svg class="w-8 h-8 text-brand-accent" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        </div>
+                        <h3 class="font-brand-heading text-2xl text-brand-accent">Discovery Offer</h3>
+                        <p class="font-bold text-4xl my-4">Free</p>
+                        <p class="text-gray-600">5 certifications of your choice</p>
+                    </div>
+                    <button class="mt-6 w-full bg-brand-accent text-white font-bold py-3 px-6 rounded-full hover:bg-green-600 transition-colors">Get Started</button>
+                </div>
+
+                <!-- Offer Card 2: Total Pack -->
+                <div class="offer-card bg-white border-4 border-brand-primary rounded-2xl p-6 shadow-lg relative flex flex-col">
+                     <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-primary text-white text-sm font-bold px-4 py-1 rounded-full shadow-lg">POPULAR</div>
+                    <div class="flex-grow">
+                        <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="font-brand-heading text-2xl text-brand-primary">Total Pack</h3>
+                        <p class="font-bold text-4xl my-4">19.90€</p>
+                        <p class="text-gray-600">All 17 certifications for 1 child</p>
+                    </div>
+                    <button class="mt-6 w-full bg-brand-primary text-white font-bold py-3 px-6 rounded-full hover:bg-blue-700 transition-colors">Choose this pack</button>
+                </div>
+
+                <!-- Offer Card 3: Family Pack -->
+                <div class="offer-card bg-white border-4 border-brand-purple rounded-2xl p-6 shadow-lg flex flex-col">
+                    <div class="flex-grow">
+                        <div class="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-purple-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        </div>
+                        <h3 class="font-brand-heading text-2xl text-purple-700">Family Pack</h3>
+                        <p class="font-bold text-4xl my-4">39.90€</p>
+                        <p class="text-gray-600">All 17 certifications for 3 children</p>
+                    </div>
+                    <button class="mt-6 w-full bg-purple-600 text-white font-bold py-3 px-6 rounded-full hover:bg-purple-700 transition-colors">Choose this pack</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Partners Section -->
+    <section id="partners" class="bg-white py-12 md:py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="font-brand-heading text-3xl md:text-4xl text-gray-800 mb-2">Meet Our Hero Partners</h2>
+            <p class="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">We team up with amazing social entrepreneurs who are changing the world every day!</p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Partner Card 1 -->
+                <div class="partner-card bg-white rounded-2xl p-6 shadow-lg text-center border-b-8 border-gray-200">
+                    <img src="https://placehold.co/100x100/A21942/FFFFFF?text=BB" alt="Eco Action Initiative Logo" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-white shadow-md">
+                    <h3 class="font-brand-heading text-2xl text-gray-800">The Bin Wizards</h3>
+                    <p class="text-gray-600 mt-2 mb-4">From Germany, we're on a mission to teach every child the superpower of recycling!</p>
+                    <a href="pages/partner_1.html" class="font-bold text-brand-primary hover:underline">Learn More &rarr;</a>
+                </div>
+                <!-- Partner Card 2 -->
+                <div class="partner-card bg-white rounded-2xl p-6 shadow-lg text-center border-b-8 border-gray-200">
+                    <img src="img/dui.svg" alt="Clean Water Collective Logo" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-white shadow-md">
+                    <h3 class="font-brand-heading text-2xl text-gray-800">City Duisburg</h3>
+                    <p class="text-gray-600 mt-2 mb-4">Guardians of the Planet is proud to partner with the City of Duisburg to empower our youngest citizens to build a sustainable and innovative home.</p>
+                    <a href="pages/duisburg.html" class="font-bold text-brand-primary hover:underline">Learn More &rarr;</a>
+                </div>
+                <!-- Partner Card 3 -->
+                <div class="partner-card bg-white rounded-2xl p-6 shadow-lg text-center border-b-8 border-gray-200">
+                    <img src="https://placehold.co/100x100/C5192D/FFFFFF?text=Bo" alt="Book Builders Logo" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-white shadow-md">
+                    <h3 class="font-brand-heading text-2xl text-gray-800">Book Builders</h3>
+                    <p class="text-gray-600 mt-2 mb-4">Creating mobile libraries that bring books and the joy of reading to children in remote areas.</p>
+                    <a href="#" class="font-bold text-brand-primary hover:underline">Learn More &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main id="missions" class="container mx-auto px-4 py-12">
+        <h2 class="font-brand-heading text-3xl md:text-4xl font-bold text-center text-gray-800 mb-10">Explore the 17 Missions</h2>
+        <div id="sdg-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-8">
+            <!-- SDG cards will be inserted here by JavaScript -->
+        </div>
+    </main>
+
+    <!-- Modal for SDG Details -->
+    <div id="sdg-modal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50 hidden">
+        <div id="modal-content" class="modal-content bg-white w-full max-w-lg mx-auto shadow-2xl p-6 md:p-8 relative animate-swoop-in">
+            <!-- Close Button -->
+            <button id="close-modal-btn" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 transition-colors">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            
+            <div class="flex items-center mb-4">
+                <div id="modal-icon-container" class="w-16 h-16 mr-4 flex-shrink-0"></div>
+                <div>
+                    <h2 id="modal-title" class="font-brand-heading text-2xl md:text-3xl"></h2>
+                </div>
+            </div>
+
+            <p id="modal-description" class="text-base md:text-lg mb-6"></p>
+            
+            <div id="modal-challenge" class="bg-yellow-100 border-l-4 border-brand-secondary text-yellow-900 p-4 rounded-lg">
+                <h3 class="font-bold text-lg mb-1">⭐ Your Guardian Challenge!</h3>
+                <p id="modal-challenge-text"></p>
+            </div>
+
+            <button onclick="window.location.href='pages/mission_1.html'" class="w-full mt-8 bg-brand-primary text-white font-bold py-3 px-6 rounded-full hover:bg-blue-700 transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                Take the training and get certified
+            </button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12">
+        <div class="container mx-auto px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About Section -->
+                <div class="md:col-span-1">
+                    <h3 class="font-brand-title text-xl text-brand-secondary mb-4">Guardians of the Planet</h3>
+                    <p class="text-gray-400">Empowering the next generation to learn about the Sustainable Development Goals and take action for a better world.</p>
+                </div>
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-brand-heading text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#missions" class="text-gray-400 hover:text-white">Missions</a></li>
+                        <li><a href="#certification" class="text-gray-400 hover:text-white">Certifications</a></li>
+                        <li><a href="#partners" class="text-gray-400 hover:text-white">Partners</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Your Achievements</a></li>
+                    </ul>
+                </div>
+                <!-- Support -->
+                 <div>
+                    <h4 class="font-brand-heading text-lg mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <!-- Follow Us -->
+                <div>
+                    <h4 class="font-brand-heading text-lg mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.345 2.525c.636-.247 1.363-.416 2.427-.465C9.795 2.013 10.148 2 12.315 2zm-1.118 4.869A5.25 5.25 0 115.25 12a5.25 5.25 0 015.947-5.131zm-1.848 8.525A3.75 3.75 0 1112 8.25a3.75 3.75 0 01-2.663 6.394zm6.406-8.56a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z" clip-rule="evenodd" /></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Guardians of the Planet. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

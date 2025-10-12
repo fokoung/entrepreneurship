@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission 1: The No Poverty Challenge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Swiper.js for Carousel -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fffafb; /* A light pinkish background related to the SDG color */
+        }
+        .mission-header {
+            background-color: #E5243B; /* SDG 1 Color */
+        }
+        .module-card {
+            background-color: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border: 2px solid #fde8eb;
+        }
+        .story-box {
+            background-color: #fef2f2; /* red-50 */
+            border-left: 4px solid #f87171; /* red-400 */
+        }
+        /* Carousel Styles */
+        .swiper {
+            width: 100%;
+            height: 320px;
+            border-radius: 1rem;
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .swiper-button-next::after, .swiper-button-prev::after {
+            font-size: 2rem !important;
+            font-weight: bold;
+        }
+        .swiper-button-next, .swiper-button-prev {
+            color: #ffffff !important;
+            text-shadow: 0 0 8px rgba(0,0,0,0.6);
+        }
+        .swiper-pagination-bullet-active {
+            background: #ffffff !important;
+        }
+
+                 /* Custom Brand Fonts */
+        .font-brand-title {
+            font-family: 'Bangers', cursive;
+            letter-spacing: 2px;
+        }
+        .font-brand-heading {
+             font-family: 'Nunito Sans', sans-serif;
+             font-weight: 900;
+        }
+
+        /* Custom Brand Colors */
+        .bg-brand-primary { background-color: #007BFF; } /* Bright Blue */
+        .text-brand-primary { color: #007BFF; }
+        .bg-brand-secondary { background-color: #FFC107; } /* Sunny Yellow */
+        .text-brand-secondary { color: #FFC107; }
+        .bg-brand-accent { background-color: #28A745; } /* Eco Green */
+        .text-brand-accent { color: #28A745; }
+        .bg-brand-light { background-color: #F0F7FF; }
+        .border-brand-accent { border-color: #28A745; }
+        .border-brand-secondary { border-color: #FFC107; }
+        .border-brand-purple { border-color: #6f42c1; }
+
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Navbar Placeholder -->
+    <nav class="sticky top-0 bg-white/90 backdrop-blur-md shadow-sm z-40">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-3">
+          <a href="#" class="flex items-center gap-2">
+            <img src="https://placehold.co/50x50/007BFF/FFFFFF?text=G" alt="Guardians of the Planet Logo" class="w-10 h-10 rounded-full">
+            <span class="font-brand-title text-2xl text-brand-primary">GUARDIANS OF THE PLANET</span>
+          </a>
+          <div class="hidden md:flex items-center space-x-6">
+            <a href="home.html" class="text-gray-600 hover:text-brand-primary font-bold">Missions</a>
+            <a href="#certification" class="text-gray-600 hover:text-brand-primary font-bold">Certifications</a>
+            <a href="#partners" class="text-gray-600 hover:text-brand-primary font-bold">Partners</a>
+            <a href="challenge_list.html" class="text-gray-600 hover:text-brand-primary font-bold">Challenges</a>
+            <a href="shopping_cart.html" class="text-gray-600 hover:text-brand-primary font-bold">Shop</a>
+            <a href="achievement.html" class="bg-brand-secondary text-gray-900 px-5 py-2 rounded-full font-bold hover:bg-yellow-400 transition-colors flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg>
+                <span>My Profile</span>
+            </a>
+          </div> 
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="mission-header text-white text-center py-10 px-4">
+        <h1 class="text-4xl md:text-5xl font-bold">🦸‍♀️ Mission 1: The No Poverty Challenge 🦸‍♂️</h1>
+        <p class="mt-4 text-lg max-w-2xl mx-auto">Welcome, Guardian! You've accepted your very first mission. Let's learn how we can create a world with no poverty!</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-4 md:p-8">
+        <div class="space-y-12">
+            <!-- Module 1 -->
+            <section class="module-card p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Module 1: What Does "No Poverty" Really Mean?</h2>
+                <p class="mb-4 text-lg">Imagine building a house. You need a strong foundation, right? If the foundation is wobbly, the whole house could fall down. For people, the "foundation" for a good life is having their basic needs met.</p>
+                <p class="mb-4 text-lg">"Poverty" is when people's foundation is wobbly—when they don't have enough to get the essential things they need to be safe, healthy, and happy. It's more than just not having money.</p>
+                
+                <h3 class="font-bold text-xl mt-6 mb-4">The Building Blocks of a Strong Foundation:</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-700">
+                    <div class="bg-red-50 p-4 rounded-xl">
+                        <span class="text-4xl">🍎</span>
+                        <h4 class="font-semibold mt-2 text-lg">Enough Food</h4>
+                        <p class="text-sm">Not just any food, but nutritious food that helps our brains think and our bodies grow strong. Without it, it's hard to even play!</p>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-xl">
+                        <span class="text-4xl">🏡</span>
+                        <h4 class="font-semibold mt-2 text-lg">A Safe Place to Live</h4>
+                        <p class="text-sm">A home protects us from the rain and cold. It's a place where we can feel safe, rest, and spend time with our family.</p>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-xl">
+                        <span class="text-4xl">💧</span>
+                        <h4 class="font-semibold mt-2 text-lg">Clean Water & Toilets</h4>
+                        <p class="text-sm">Clean water is crucial for drinking and cooking. Having clean toilets helps stop sickness from spreading so everyone can stay healthy.</p>
+                    </div>
+                    <div class="bg-yellow-50 p-4 rounded-xl">
+                        <span class="text-4xl">🩺</span>
+                        <h4 class="font-semibold mt-2 text-lg">Access to Doctors</h4>
+                        <p class="text-sm">When we get sick, we need a doctor or medicine to get better. Everyone deserves the chance to be healthy, no matter what.</p>
+                    </div>
+                    <div class="bg-purple-50 p-4 rounded-xl">
+                        <span class="text-4xl">🏫</span>
+                        <h4 class="font-semibold mt-2 text-lg">A Good School</h4>
+                        <p class="text-sm">School isn't just about reading and math. It's where we learn new things, make friends, and prepare for the future. It gives us the tools to build our dreams.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Module 2 -->
+            <section class="module-card p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Module 2: Why is This Mission So Important?</h2>
+                <p class="mb-6 text-lg">Ending poverty is like turning on a light for the whole world. When people have a strong foundation, they can do amazing things that help everyone. It creates a chain reaction of goodness!</p>
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-1/2">
+                        <!-- Swiper Carousel -->
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="p1.jpg" alt="Photo of makeshift housing" title="Makeshift Housing"></div>
+                                <div class="swiper-slide"><img src="p2.jpg" alt="Photo showing lack of clean water" title="Lack of Clean Water"></div>
+                                <div class="swiper-slide"><img src="p3.jpg" alt="Photo of a family receiving humanitarian aid" title="Family Receiving Aid"></div>
+                                <div class="swiper-slide"><img src="p4.png" alt="Photo of a child in a slum" title="Child in Slum"></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <ul class="space-y-4 text-lg">
+                            <li class="flex items-start">
+                                <span class="text-2xl mr-3">💡</span>
+                                <div><strong>It Sparks Big Dreams.</strong> A child who gets a good education might grow up to be a scientist who discovers a cure for a disease, or an artist who brings joy to millions!</div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-2xl mr-3">💪</span>
+                                <div><strong>It Builds Stronger Communities.</strong> When adults have good jobs, they can support local shops, and the whole town becomes a better place to live, with safer parks and friendlier neighborhoods.</div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-2xl mr-3">🌍</span>
+                                <div><strong>It Creates a Fairer World.</strong> This mission is about fairness. It's about making sure that every single person has the chance to be their best self, no matter where they were born.</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Module 3 -->
+            <section class="module-card p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Module 3: Your Guardian Toolkit!</h2>
+                <p class="mb-6 text-lg">Even as a kid, you have incredible power to make a difference. Here are some simple but powerful tools you can use every day:</p>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="font-bold text-xl text-red-500 mb-2">🤝 The Power of Sharing and Giving</h3>
+                        <p>When you donate clothes you've outgrown or toys you no longer play with, you're not just giving an object. You're giving another child a chance to feel warm, to play, and to feel cared for. Organizations like Goodwill or local community centers can help find new homes for your things.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="font-bold text-xl text-blue-500 mb-2">♻️ The Power of Not Wasting</h3>
+                        <p>Think about it: when you save water, you leave more for others. When you finish your food, you honor the resources it took to grow it. Every light you turn off saves energy. These small actions, when done by many, make a huge difference and show respect for our planet and everyone on it.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="font-bold text-xl text-green-500 mb-2">📚 The Power of Learning and Understanding</h3>
+                        <p>The world is a huge place with so many different stories. By reading books or watching shows about different cultures, you build empathy. Empathy is the superpower of understanding how someone else feels. The more we understand each other, the more we want to help.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="font-bold text-xl text-purple-500 mb-2">💖 The Power of Kindness and Inclusion</h3>
+                        <p>Poverty can make people feel lonely or left out. Your kindness can be a bright light. Inviting someone who is sitting alone to play, sharing your snacks, or just giving a smile are powerful acts. You are building a community where everyone feels like they belong.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Concluding Section -->
+            <section class="text-center p-6 md:p-10">
+                <h2 class="text-4xl font-bold text-green-600 mb-4">🌟 Your First Step is Complete! 🌟</h2>
+                <p class="text-xl mb-4 max-w-3xl mx-auto"><strong>Amazing work, Guardian!</strong> You now understand so much more about poverty and why it's a mission we must all take on. Knowledge is the first step to action, and you've just taken a giant one. Keep this knowledge in your heart and continue to use your powers every day!</p>
+            </section>
+
+        </div>
+    </main>
+     
+      <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12">
+        <div class="container mx-auto px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About Section -->
+                <div class="md:col-span-1">
+                    <h3 class="font-brand-title text-xl text-brand-secondary mb-4">Guardians of the Planet</h3>
+                    <p class="text-gray-400">Empowering the next generation to learn about the Sustainable Development Goals and take action for a better world.</p>
+                </div>
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-brand-heading text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#missions" class="text-gray-400 hover:text-white">Missions</a></li>
+                        <li><a href="#certification" class="text-gray-400 hover:text-white">Certifications</a></li>
+                        <li><a href="#partners" class="text-gray-400 hover:text-white">Partners</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Your Achievements</a></li>
+                    </ul>
+                </div>
+                <!-- Support -->
+                 <div>
+                    <h4 class="font-brand-heading text-lg mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <!-- Follow Us -->
+                <div>
+                    <h4 class="font-brand-heading text-lg mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.345 2.525c.636-.247 1.363-.416 2.427-.465C9.795 2.013 10.148 2 12.315 2zm-1.118 4.869A5.25 5.25 0 115.25 12a5.25 5.25 0 015.947-5.131zm-1.848 8.525A3.75 3.75 0 1112 8.25a3.75 3.75 0 01-2.663 6.394zm6.406-8.56a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z" clip-rule="evenodd" /></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Guardians of the Planet. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="main.js"></script>
+
+    <!-- Swiper.js Script -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            loop: true,
+        });
+    </script>
+
+    
+</body>
+</html>
+
