@@ -3,16 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Achievements - Guardians of the Planet</title>
+    <title>About Us - Guardians of the Planet</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Nunito+Sans:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+        }
+        .font-brand-heading {
+             font-family: 'Nunito Sans', sans-serif;
+             font-weight: 900;
+        }
+        .hero-gradient {
+            background-image: linear-gradient(to right, #007BFF, #0056b3);
+        }
+        .author-card {
+            background-color: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border: 1px solid #e5e7eb;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+        .author-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 30px -10px rgba(0, 0, 0, 0.1);
+        }
+        .sdg-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+    </style>
 </head>
 <body class="text-gray-800">
-
-      <!-- Navigation Bar HTML -->
+  <!-- Navigation Bar HTML -->
 <nav class="sticky top-0 bg-white/90 backdrop-blur-md shadow-sm z-40">
     <div class="container mx-auto px-4">
         <div class="flex justify-between items-center py-3">
@@ -46,131 +76,103 @@
         <a href="achievement.html" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">My Profile</a>
     </div>
 </nav>
-
-    <!-- Header -->
-    <header class="header-gradient text-white py-12">
-        <div class="container mx-auto px-4 text-center">
-            <img src="https://placehold.co/120x120/FFFFFF/3B82F6?text=JM" alt="User Avatar" class="w-28 h-28 rounded-full mx-auto mb-4 border-4 border-white/50 shadow-xl">
-            <!-- This name would be dynamically inserted for the logged-in user -->
-            <h1 class="text-4xl md:text-5xl font-bold">Joe Mooo's Achievements</h1>
-            <p class="text-lg md:text-xl mt-2">Wow! Look at all the amazing things you've accomplished!</p>
+    <!-- Header / Hero Section -->
+    <header class="hero-gradient text-white">
+        <div class="container mx-auto px-4 py-20 text-center">
+            <h1 class="text-4xl md:text-6xl font-brand-heading">The People Behind the Mission</h1>
+            <p class="text-lg md:text-xl mt-4 max-w-3xl mx-auto">We're a team of engineers and strategists passionate about empowering the next generation of changemakers.</p>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="container mx-auto px-4 py-12">
-
-        <!-- My Certificates Section -->
-        <section id="certificates">
-            <h2 class="text-3xl font-bold text-center mb-8">My SDG Certificates</h2>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- Certificate Card Example 1 -->
-                <div class="achievement-card overflow-hidden">
-                    <div class="p-5" style="background-color: #E5243B;">
-                        <h3 class="text-2xl font-bold text-white">SDG 1: No Poverty</h3>
+    <main class="container mx-auto px-4 py-16">
+        <h2 class="text-3xl font-brand-heading text-center mb-12">Meet Our Founders</h2>
+        <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+            
+            <!-- Author 1 Card (AI & Software Engineer) -->
+            <div class="author-card">
+                 <div class="bg-green-100 p-8 text-center">
+                    <img src="https://placehold.co/400x400/bfdbfe/1e40af?text=Lukas" alt="Lukas Weber" class="w-40 h-40 rounded-full mx-auto border-8 border-white shadow-lg">
+                </div>
+                <div class="p-8 text-center">
+                    <h2 class="text-2xl font-brand-heading text-gray-800">Lukas Weber</h2>
+                    <p class="font-bold text-blue-600">Co-Founder & CTO (The Engineer)</p>
+                    <p class="text-gray-600 mt-4">As an experienced AI and Software Engineer, Lukas is the technical architect of the Guardians of the Planet platform. He leads the development of our scalable backend, the engaging frontend, and is currently working on an AI-powered system to create personalized learning paths for every child.</p>
+                     <div class="mt-6">
+                        <p class="font-bold text-gray-700">Favorite SDG:</p>
+                        <span class="sdg-badge mt-2" style="background-color: #FD6925; color: white;">SDG 9: Industry, Innovation & Infrastructure</span>
                     </div>
+                     <div class="mt-6 flex justify-center space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-blue-500">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Author 2 Card (BWL) -->
+            <div class="author-card">
+                <div class="bg-blue-100 p-8 text-center">
+                    <img src="https://placehold.co/400x400/a7d8fd/1e3a8a?text=Martin" alt="Martin Schmidt" class="w-40 h-40 rounded-full mx-auto border-8 border-white shadow-lg">
+                </div>
+                <div class="p-8 text-center">
+                    <h2 class="text-2xl font-brand-heading text-gray-800">Martin Schmidt</h2>
+                    <p class="font-bold text-blue-600">Co-Founder & CEO (The Strategist)</p>
+                    <p class="text-gray-600 mt-4">With a background in Business Administration (BWL) and a passion for social impact, Martin is the strategic mind behind the project. He developed the innovative business model, built the successful partnership with the City of Duisburg, and is responsible for scaling the company's growth and impact across Germany.</p>
+                    <div class="mt-6">
+                        <p class="font-bold text-gray-700">Favorite SDG:</p>
+                        <span class="sdg-badge mt-2" style="background-color: #A21942; color: white;">SDG 8: Decent Work & Economic Growth</span>
+                    </div>
+                    <div class="mt-6 flex justify-center space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-blue-500">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Our Values Section -->
+        <section class="my-16">
+            <h2 class="text-3xl font-brand-heading text-center mb-12">Our Core Values</h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto text-center">
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                    <img src="https://placehold.co/600x400/fef08a/854d0e?text=Playful+Learning" alt="Child laughing while using an educational app on a tablet" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <p class="text-gray-600 mb-2"><strong>Date Earned:</strong> Oct 8, 2025</p>
-                        <p class="text-gray-600 mb-4"><strong>Score:</strong> 95%</p>
-                        <a href="certificate.html" class="font-bold text-blue-600 hover:underline inline-block">View Full Certificate &rarr;</a>
+                        <h3 class="font-bold text-xl mt-2">Playful Learning</h3>
+                        <p class="text-gray-600 mt-2">We believe education should be an adventure. Every lesson is a mission, and every achievement is a celebration.</p>
                     </div>
                 </div>
-
-                <!-- Certificate Card Example 2 -->
-                <div class="achievement-card overflow-hidden">
-                    <div class="p-5" style="background-color: #3F7E44;">
-                         <h3 class="text-2xl font-bold text-white">SDG 13: Climate Action</h3>
-                    </div>
+                 <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                    <img src="https://placehold.co/600x400/a7f3d0/166534?text=Real+Impact" alt="Children planting a small tree in a park" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <p class="text-gray-600 mb-2"><strong>Date Earned:</strong> Sep 25, 2025</p>
-                        <p class="text-gray-600 mb-4"><strong>Score:</strong> 100% (Excellence!)</p>
-                        <a href="#" class="font-bold text-blue-600 hover:underline inline-block">View Full Certificate &rarr;</a>
+                        <h3 class="font-bold text-xl mt-2">Real-World Impact</h3>
+                        <p class="text-gray-600 mt-2">We connect digital learning to tangible actions, empowering children to see the positive change they can make.</p>
                     </div>
                 </div>
-
-                <!-- Placeholder for more certificates -->
-                <div class="border-2 border-dashed border-gray-300 rounded-2xl flex items-center justify-center text-center p-6">
-                    <div>
-                        <div class="text-4xl text-gray-400 mb-2">+</div>
-                        <h3 class="text-xl font-bold text-gray-500">More missions await!</h3>
-                        <p class="text-gray-400">Complete a new course to earn your next certificate.</p>
+                 <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                    <img src="https://placehold.co/600x400/bfdbfe/1e3a8a?text=Safety+First" alt="Parent smiling while watching a child use a tablet" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mt-2">Safety First</h3>
+                        <p class="text-gray-600 mt-2">We are committed to providing a secure, ad-free, and positive environment where children can learn and explore safely.</p>
                     </div>
                 </div>
-
             </div>
         </section>
 
-        <!-- My Special Badges Section -->
-        <section id="badges" class="mt-16">
-            <h2 class="text-3xl font-bold text-center mb-8">My Special Badges</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
-
-                <!-- Badge Card Example 1 -->
-                <div class="achievement-card p-6 text-center">
-                    <img src="https://placehold.co/200x200/4CAF50/FFFFFF?text=Wizard+Badge" alt="Recycling Wizard Badge" class="w-32 h-32 mx-auto mb-4 rounded-full">
-                    <h3 class="text-xl font-bold">Recycling Wizard</h3>
-                    <p class="text-sm text-gray-500">From: <span class="font-semibold">BB</span></p>
-                </div>
-
-                <!-- Placeholder for more badges -->
-                <div class="border-2 border-dashed border-gray-300 rounded-2xl flex items-center justify-center text-center p-6 min-h-[240px]">
-                     <div>
-                        <div class="text-4xl text-gray-400 mb-2">+</div>
-                        <h3 class="text-xl font-bold text-gray-500">Discover new partners!</h3>
-                        <p class="text-gray-400">Complete partner quizzes to earn more special badges.</p>
-                    </div>
-                </div>
-                
-            </div>
-        </section>
-
-        <!-- My Completed Challenges Section -->
-        <section id="challenges" class="mt-16">
-            <h2 class="text-3xl font-bold text-center mb-8">My Completed Challenges Album</h2>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- Example Completed Challenge Card 1 -->
-                <div class="achievement-card overflow-hidden">
-                    <img src="https://placehold.co/600x400/a7f3d0/166534?text=My+Bike+Ride" alt="Photo of a bike ride" class="w-full h-48 object-cover"/>
-                    <div class="p-6">
-                         <h3 class="text-xl font-bold">My Green Commute</h3>
-                         <p class="text-sm text-gray-500 mt-1">"I helped the planet by biking to the park instead of taking the car!"</p>
-                    </div>
-                </div>
-
-                <!-- Example Completed Challenge Card 2 -->
-                <div class="achievement-card overflow-hidden">
-                     <img src="https://placehold.co/600x400/fef08a/854d0e?text=My+Lunchbox" alt="Photo of a waste-free lunchbox" class="w-full h-48 object-cover"/>
-                     <div class="p-6">
-                        <h3 class="text-xl font-bold">Waste-Free Lunch</h3>
-                        <p class="text-sm text-gray-500 mt-1">"I packed my lunch in reusable containers to fight waste."</p>
-                     </div>
-                </div>
-                
-                <!-- Placeholder for more challenges -->
-                <div class="border-2 border-dashed border-gray-300 rounded-2xl flex items-center justify-center text-center p-6 min-h-[300px]">
-                    <div>
-                        <div class="text-4xl text-gray-400 mb-2">+</div>
-                        <h3 class="text-xl font-bold text-gray-500">More challenges await!</h3>
-                        <p class="text-gray-400">Complete a new challenge to add it to your album.</p>
-                    </div>
-                </div>
-            </div>
+        <!-- Our Shared Vision Section -->
+        <section class="bg-blue-50 rounded-2xl p-8 md:p-12 my-16 text-center max-w-4xl mx-auto">
+             <h2 class="text-3xl font-brand-heading text-center mb-4 text-blue-800">Our Shared Vision</h2>
+             <blockquote class="text-xl italic text-gray-700">
+                "If we want a sustainable future, we have to start with the people who will live in it the longest — our children. We believe that by making global goals personal, playful, and actionable, we can empower a new generation to not just learn about the world, but to actively build a better one."
+             </blockquote>
         </section>
 
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-100 mt-12 py-8">
-        <div class="container mx-auto px-4 text-center text-gray-600">
-            <p>Keep up the fantastic work, Guardian!</p>
-            <a href="../index.html" class="mt-2 font-bold text-blue-600 hover:underline">Back to Missions</a>
-        </div>
-    </footer>
-
-     <!-- Footer -->
-    <footer class="bg-gray-800 text-white pt-12">
+     <footer class="bg-gray-800 text-white pt-12">
         <div class="container mx-auto px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <!-- About Section -->
@@ -227,16 +229,7 @@
         </div>
     </footer>
 
-<script src="../js/main.js"></script>
-<script>
-    document.getElementById('menu-toggle').addEventListener('click', function() {
-        var mobileMenu = document.getElementById('mobile-menu');
-        if (mobileMenu.classList.contains('hidden')) {
-            mobileMenu.classList.remove('hidden');
-        } else {
-            mobileMenu.classList.add('hidden');
-        }
-    });
-</script>
+
 </body>
 </html>
+

@@ -3,16 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Achievements - Guardians of the Planet</title>
+    <title>FAQ - Guardians of the Planet</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Nunito+Sans:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+        }
+        .font-brand-heading {
+             font-family: 'Nunito Sans', sans-serif;
+             font-weight: 900;
+        }
+        .faq-header {
+            background-image: linear-gradient(to right, #007BFF, #0056b3);
+        }
+        .faq-question {
+            cursor: pointer;
+        }
+        .faq-answer {
+            display: none;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        .faq-item.open .faq-answer {
+            display: block;
+        }
+        .faq-item.open .arrow-down {
+            transform: rotate(180deg);
+        }
+        .arrow-down {
+            transition: transform 0.3s ease;
+        }
+    </style>
 </head>
 <body class="text-gray-800">
-
-      <!-- Navigation Bar HTML -->
+  <!-- Navigation Bar HTML -->
 <nav class="sticky top-0 bg-white/90 backdrop-blur-md shadow-sm z-40">
     <div class="container mx-auto px-4">
         <div class="flex justify-between items-center py-3">
@@ -46,130 +74,101 @@
         <a href="achievement.html" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">My Profile</a>
     </div>
 </nav>
-
     <!-- Header -->
-    <header class="header-gradient text-white py-12">
-        <div class="container mx-auto px-4 text-center">
-            <img src="https://placehold.co/120x120/FFFFFF/3B82F6?text=JM" alt="User Avatar" class="w-28 h-28 rounded-full mx-auto mb-4 border-4 border-white/50 shadow-xl">
-            <!-- This name would be dynamically inserted for the logged-in user -->
-            <h1 class="text-4xl md:text-5xl font-bold">Joe Mooo's Achievements</h1>
-            <p class="text-lg md:text-xl mt-2">Wow! Look at all the amazing things you've accomplished!</p>
+    <header class="faq-header text-white">
+        <div class="container mx-auto px-4 py-20 text-center">
+            <h1 class="text-4xl md:text-6xl font-brand-heading">Frequently Asked Questions</h1>
+            <p class="text-lg md:text-xl mt-4 max-w-3xl mx-auto">Have questions? We've got answers! Find information about our platform, missions, and how you can get involved.</p>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="container mx-auto px-4 py-12">
-
-        <!-- My Certificates Section -->
-        <section id="certificates">
-            <h2 class="text-3xl font-bold text-center mb-8">My SDG Certificates</h2>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- Certificate Card Example 1 -->
-                <div class="achievement-card overflow-hidden">
-                    <div class="p-5" style="background-color: #E5243B;">
-                        <h3 class="text-2xl font-bold text-white">SDG 1: No Poverty</h3>
+    <main class="container mx-auto px-4 py-16">
+        <div class="max-w-4xl mx-auto">
+            
+            <!-- General Questions Section -->
+            <section class="mb-12">
+                <h2 class="text-3xl font-brand-heading mb-6">General Questions</h2>
+                <div class="space-y-4" id="faq-general">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item bg-white p-6 rounded-lg shadow-sm">
+                        <div class="faq-question flex justify-between items-center">
+                            <h3 class="font-bold text-lg">What is Guardians of the Planet?</h3>
+                            <svg class="w-6 h-6 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+                        <div class="faq-answer text-gray-600">
+                            Guardians of the Planet is a fun, interactive web platform that teaches children aged 7-12 about the 17 UN Sustainable Development Goals (SDGs) through gamified courses, real-world challenges, and local partnerships.
+                        </div>
                     </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 mb-2"><strong>Date Earned:</strong> Oct 8, 2025</p>
-                        <p class="text-gray-600 mb-4"><strong>Score:</strong> 95%</p>
-                        <a href="certificate.html" class="font-bold text-blue-600 hover:underline inline-block">View Full Certificate &rarr;</a>
-                    </div>
-                </div>
-
-                <!-- Certificate Card Example 2 -->
-                <div class="achievement-card overflow-hidden">
-                    <div class="p-5" style="background-color: #3F7E44;">
-                         <h3 class="text-2xl font-bold text-white">SDG 13: Climate Action</h3>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 mb-2"><strong>Date Earned:</strong> Sep 25, 2025</p>
-                        <p class="text-gray-600 mb-4"><strong>Score:</strong> 100% (Excellence!)</p>
-                        <a href="#" class="font-bold text-blue-600 hover:underline inline-block">View Full Certificate &rarr;</a>
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item bg-white p-6 rounded-lg shadow-sm">
+                        <div class="faq-question flex justify-between items-center">
+                            <h3 class="font-bold text-lg">Is the platform free to use?</h3>
+                            <div class="faq-answer text-gray-600">
+                                Yes! We operate on a freemium model. Basic access, including our introductory courses on 5 SDGs, is completely free. A premium subscription unlocks all 17 SDG courses, special certificates, and advanced features for the whole family.
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </section>
 
-                <!-- Placeholder for more certificates -->
-                <div class="border-2 border-dashed border-gray-300 rounded-2xl flex items-center justify-center text-center p-6">
-                    <div>
-                        <div class="text-4xl text-gray-400 mb-2">+</div>
-                        <h3 class="text-xl font-bold text-gray-500">More missions await!</h3>
-                        <p class="text-gray-400">Complete a new course to earn your next certificate.</p>
+            <!-- For Parents Section -->
+            <section class="mb-12">
+                <h2 class="text-3xl font-brand-heading mb-6">For Parents & Guardians</h2>
+                <div class="space-y-4" id="faq-parents">
+                    <!-- FAQ Item -->
+                    <div class="faq-item bg-white p-6 rounded-lg shadow-sm">
+                        <div class="faq-question flex justify-between items-center">
+                            <h3 class="font-bold text-lg">Is the platform safe for my child?</h3>
+                            <svg class="w-6 h-6 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+                        <div class="faq-answer text-gray-600">
+                            Absolutely. Safety is our top priority. The platform is a completely ad-free space. All user-generated content, like photos from challenges, is moderated by our team before it appears publicly to ensure a positive and secure environment.
+                        </div>
                     </div>
                 </div>
+            </section>
 
-            </div>
-        </section>
-
-        <!-- My Special Badges Section -->
-        <section id="badges" class="mt-16">
-            <h2 class="text-3xl font-bold text-center mb-8">My Special Badges</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
-
-                <!-- Badge Card Example 1 -->
-                <div class="achievement-card p-6 text-center">
-                    <img src="https://placehold.co/200x200/4CAF50/FFFFFF?text=Wizard+Badge" alt="Recycling Wizard Badge" class="w-32 h-32 mx-auto mb-4 rounded-full">
-                    <h3 class="text-xl font-bold">Recycling Wizard</h3>
-                    <p class="text-sm text-gray-500">From: <span class="font-semibold">BB</span></p>
-                </div>
-
-                <!-- Placeholder for more badges -->
-                <div class="border-2 border-dashed border-gray-300 rounded-2xl flex items-center justify-center text-center p-6 min-h-[240px]">
-                     <div>
-                        <div class="text-4xl text-gray-400 mb-2">+</div>
-                        <h3 class="text-xl font-bold text-gray-500">Discover new partners!</h3>
-                        <p class="text-gray-400">Complete partner quizzes to earn more special badges.</p>
+            <!-- For Teachers Section -->
+            <section class="mb-12">
+                <h2 class="text-3xl font-brand-heading mb-6">For Teachers & Schools</h2>
+                <div class="space-y-4" id="faq-teachers">
+                     <!-- FAQ Item -->
+                    <div class="faq-item bg-white p-6 rounded-lg shadow-sm">
+                        <div class="faq-question flex justify-between items-center">
+                            <h3 class="font-bold text-lg">Is the content aligned with the school curriculum?</h3>
+                            <svg class="w-6 h-6 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+                        <div class="faq-answer text-gray-600">
+                            Yes. Our content is designed to align with the principles of Education for Sustainable Development (ESD or BNE in Germany), which is an increasingly important part of national curricula. Our platform serves as a ready-to-use digital tool for teachers to meet these requirements in an engaging way.
+                        </div>
+                    </div>
+                     <!-- FAQ Item -->
+                    <div class="faq-item bg-white p-6 rounded-lg shadow-sm">
+                        <div class="faq-question flex justify-between items-center">
+                            <h3 class="font-bold text-lg">How do I register my school for a city-sponsored license?</h3>
+                            <svg class="w-6 h-6 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+                        <div class="faq-answer text-gray-600">
+                           If your city is a sponsoring partner (like the City of Duisburg), there will be a specific registration portal for schools in your area. Please visit our 'Partners' page to see if your city is listed and follow the instructions there. If not, feel free to contact us to discuss options for your school or district.
+                        </div>
                     </div>
                 </div>
-                
-            </div>
-        </section>
+            </section>
 
-        <!-- My Completed Challenges Section -->
-        <section id="challenges" class="mt-16">
-            <h2 class="text-3xl font-bold text-center mb-8">My Completed Challenges Album</h2>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- Example Completed Challenge Card 1 -->
-                <div class="achievement-card overflow-hidden">
-                    <img src="https://placehold.co/600x400/a7f3d0/166534?text=My+Bike+Ride" alt="Photo of a bike ride" class="w-full h-48 object-cover"/>
-                    <div class="p-6">
-                         <h3 class="text-xl font-bold">My Green Commute</h3>
-                         <p class="text-sm text-gray-500 mt-1">"I helped the planet by biking to the park instead of taking the car!"</p>
-                    </div>
-                </div>
+            <!-- Still have questions? -->
+            <section class="bg-white rounded-2xl shadow-lg p-8 md:p-12 text-center">
+                 <h2 class="text-3xl font-brand-heading text-center mb-4">Still have questions?</h2>
+                 <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-6">Our team is here to help. Contact us and we'll get back to you as soon as possible.</p>
+                 <a href="#contact" class="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-blue-700 transition-colors">
+                    Contact Us
+                 </a>
+            </section>
 
-                <!-- Example Completed Challenge Card 2 -->
-                <div class="achievement-card overflow-hidden">
-                     <img src="https://placehold.co/600x400/fef08a/854d0e?text=My+Lunchbox" alt="Photo of a waste-free lunchbox" class="w-full h-48 object-cover"/>
-                     <div class="p-6">
-                        <h3 class="text-xl font-bold">Waste-Free Lunch</h3>
-                        <p class="text-sm text-gray-500 mt-1">"I packed my lunch in reusable containers to fight waste."</p>
-                     </div>
-                </div>
-                
-                <!-- Placeholder for more challenges -->
-                <div class="border-2 border-dashed border-gray-300 rounded-2xl flex items-center justify-center text-center p-6 min-h-[300px]">
-                    <div>
-                        <div class="text-4xl text-gray-400 mb-2">+</div>
-                        <h3 class="text-xl font-bold text-gray-500">More challenges await!</h3>
-                        <p class="text-gray-400">Complete a new challenge to add it to your album.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-100 mt-12 py-8">
-        <div class="container mx-auto px-4 text-center text-gray-600">
-            <p>Keep up the fantastic work, Guardian!</p>
-            <a href="../index.html" class="mt-2 font-bold text-blue-600 hover:underline">Back to Missions</a>
-        </div>
-    </footer>
-
-     <!-- Footer -->
     <footer class="bg-gray-800 text-white pt-12">
         <div class="container mx-auto px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -227,16 +226,20 @@
         </div>
     </footer>
 
-<script src="../js/main.js"></script>
-<script>
-    document.getElementById('menu-toggle').addEventListener('click', function() {
-        var mobileMenu = document.getElementById('mobile-menu');
-        if (mobileMenu.classList.contains('hidden')) {
-            mobileMenu.classList.remove('hidden');
-        } else {
-            mobileMenu.classList.add('hidden');
-        }
-    });
-</script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqContainers = document.querySelectorAll('.space-y-4');
+
+            faqContainers.forEach(container => {
+                container.addEventListener('click', (event) => {
+                    const faqItem = event.target.closest('.faq-item');
+                    if (faqItem) {
+                        faqItem.classList.toggle('open');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
