@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Guardians of the Planet</title>
+    <title>For Investors & Partners - Guardians of the Planet</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,153 +20,189 @@
         .hero-gradient {
             background-image: linear-gradient(to right, #007BFF, #0056b3);
         }
-        .author-card {
-            background-color: white;
-            border-radius: 1.5rem;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            border: 1px solid #e5e7eb;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .highlight {
+            color: #007BFF;
+        }
+        .kpi-card {
+            background: #ffffff;
+            border-left: 4px solid #007BFF;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
             overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            border-radius: 0.5rem;
         }
-        .author-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 25px 30px -10px rgba(0, 0, 0, 0.1);
-        }
-        .sdg-badge {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.8rem;
-            font-weight: 700;
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
     </style>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body class="text-gray-800">
-  <!-- Navigation Bar HTML -->
-<nav class="sticky top-0 bg-white/90 backdrop-blur-md shadow-sm z-40">
-    <div class="container mx-auto px-4">
-        <div class="flex justify-between items-center py-3">
-            <a href="../index.html" class="flex items-center gap-2">
-                <img src="https://placehold.co/50x50/007BFF/FFFFFF?text=G" alt="Guardians of the Planet Logo" class="w-10 h-10 rounded-full">
-                <span class="font-brand-title text-2xl text-brand-primary">GUARDIANS OF THE PLANET</span>
-            </a>
-            <!-- Hamburger Menu (Mobile) -->
-            <div class="md:hidden">
-                <button id="menu-toggle" class="text-gray-600 hover:text-brand-primary">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
-            </div>
-            <!-- Regular Menu (Desktop) -->
-            <div class="hidden md:flex items-center space-x-6">
-                <a href="../index.html#missions" class="text-gray-600 hover:text-brand-primary font-bold">Missions</a>
-                <a href="challenge_list.html" class="text-gray-600 hover:text-brand-primary font-bold">Challenges</a>
-                <a href="partner_1.html" class="text-gray-600 hover:text-brand-primary font-bold">Shop</a>
-                <a href="achievement.html" class="bg-brand-secondary text-gray-900 px-5 py-2 rounded-full font-bold hover:bg-yellow-400 transition-colors flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg>
-                    <span>My Profile</span>
+
+    
+ <!-- Navbar -->
+    <nav class="sticky top-0 bg-white/90 backdrop-blur-md shadow-sm z-40">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-3">
+                <a href="#" class="flex items-center gap-2">
+                    <img src="https://placehold.co/50x50/007BFF/FFFFFF?text=G" alt="Guardians of the Planet Logo" class="w-10 h-10 rounded-full">
+                    <span class="font-brand-title text-2xl text-brand-primary">GUARDIANS OF THE PLANET</span>
                 </a>
+                <!-- Hamburger Menu (Mobile) -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-600 hover:text-brand-primary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+                <!-- Regular Menu (Desktop) -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#missions" class="text-gray-600 hover:text-brand-primary font-bold">Missions</a>
+                    <a href="challenge_list.html" class="text-gray-600 hover:text-brand-primary font-bold">Challenges</a>
+                    <a href="shopping_cart.html" class="text-gray-600 hover:text-brand-primary font-bold">Shop</a>
+                    <a href="achievement.html" class="bg-brand-secondary text-gray-900 px-5 py-2 rounded-full font-bold hover:bg-yellow-400 transition-colors flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg>
+                        <span>My Profile</span>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden">
-        <a href="../index.html#missions" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Missions</a>
-        <a href="challenge_list.html" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Challenges</a>
-        <a href="partner_1.html" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Shop</a>
-        <a href="achievement.html" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">My Profile</a>
-    </div>
-</nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#missions" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Missions</a>
+            <a href="challenge_list.html" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Challenges</a>
+            <a href="shopping_cart.html" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Shop</a>
+            <a href="achievement.html" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">My Profile</a>
+        </div>
+    </nav>
+
+
     <!-- Header / Hero Section -->
     <header class="hero-gradient text-white">
         <div class="container mx-auto px-4 py-20 text-center">
-            <h1 class="text-4xl md:text-6xl font-brand-heading">The People Behind the Mission</h1>
-            <p class="text-lg md:text-xl mt-4 max-w-3xl mx-auto">We're a team of engineers and strategists passionate about empowering the next generation of changemakers.</p>
+            <h1 class="text-4xl md:text-6xl font-brand-heading">Invest in the Next Generation of Changemakers</h1>
+            <p class="text-lg md:text-xl mt-4 max-w-3xl mx-auto">Guardians of the Planet is a rapidly growing EdTech platform with a proven model for turning sustainability education into real-world action. We are seeking partners to help us scale our impact across Germany and beyond.</p>
+            <a href="#contact" class="inline-block mt-8 bg-yellow-400 text-gray-900 font-bold py-3 px-8 rounded-full text-lg hover:bg-yellow-300 transition-colors">
+                Become a Partner
+            </a>
         </div>
     </header>
 
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-16">
-        <h2 class="text-3xl font-brand-heading text-center mb-12">Meet Our Founders</h2>
-        <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-            
-            <!-- Author 1 Card (AI & Software Engineer) -->
-            <div class="author-card">
-                 <div class="bg-green-100 p-8 text-center">
-                    <img src="https://placehold.co/400x400/bfdbfe/1e40af?text=Lukas" alt="Lukas Weber" class="w-40 h-40 rounded-full mx-auto border-8 border-white shadow-lg">
+
+        <!-- The Opportunity Section -->
+        <section class="mb-20">
+            <h2 class="text-3xl font-brand-heading text-center mb-10">A Unique Opportunity in a Growing Market</h2>
+            <div class="max-w-4xl mx-auto mb-12">
+                <div class="video-container">
+                    <!-- Placeholder for your pitch video -->
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Guardians of the Planet Pitch Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <div class="p-8 text-center">
-                    <h2 class="text-2xl font-brand-heading text-gray-800">Lukas Weber</h2>
-                    <p class="font-bold text-blue-600">Co-Founder & CTO (The Engineer)</p>
-                    <p class="text-gray-600 mt-4">As an experienced AI and Software Engineer, Lukas is the technical architect of the Guardians of the Planet platform. He leads the development of our scalable backend, the engaging frontend, and is currently working on an AI-powered system to create personalized learning paths for every child.</p>
-                     <div class="mt-6">
-                        <p class="font-bold text-gray-700">Favorite SDG:</p>
-                        <span class="sdg-badge mt-2" style="background-color: #FD6925; color: white;">SDG 9: Industry, Innovation & Infrastructure</span>
-                    </div>
-                     <div class="mt-6 flex justify-center space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-blue-500">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
-                        </a>
-                    </div>
-                </div>
+                <p class="text-center text-sm text-gray-500 mt-2">Watch our short pitch video to learn more.</p>
             </div>
 
-            <!-- Author 2 Card (BWL) -->
-            <div class="author-card">
-                <div class="bg-blue-100 p-8 text-center">
-                    <img src="https://placehold.co/400x400/a7d8fd/1e3a8a?text=Martin" alt="Martin Schmidt" class="w-40 h-40 rounded-full mx-auto border-8 border-white shadow-lg">
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="text-4xl">💰</div>
+                    <h3 class="font-bold text-lg mt-2">The "DigitalPakt Schule"</h3>
+                    <p class="text-sm text-gray-600">Billions in government funding are accelerating the demand for high-quality digital learning tools in German schools.</p>
                 </div>
-                <div class="p-8 text-center">
-                    <h2 class="text-2xl font-brand-heading text-gray-800">Martin Schmidt</h2>
-                    <p class="font-bold text-blue-600">Co-Founder & CEO (The Strategist)</p>
-                    <p class="text-gray-600 mt-4">With a background in Business Administration (BWL) and a passion for social impact, Martin is the strategic mind behind the project. He developed the innovative business model, built the successful partnership with the City of Duisburg, and is responsible for scaling the company's growth and impact across Germany.</p>
-                    <div class="mt-6">
-                        <p class="font-bold text-gray-700">Favorite SDG:</p>
-                        <span class="sdg-badge mt-2" style="background-color: #A21942; color: white;">SDG 8: Decent Work & Economic Growth</span>
-                    </div>
-                    <div class="mt-6 flex justify-center space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-blue-500">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
-                        </a>
-                    </div>
+                 <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="text-4xl">🌱</div>
+                    <h3 class="font-bold text-lg mt-2">Corporate ESG & CSR</h3>
+                    <p class="text-sm text-gray-600">Companies are actively seeking authentic, high-impact partnerships to fulfill their social responsibility goals.</p>
+                </div>
+                 <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="text-4xl">📚</div>
+                    <h3 class="font-bold text-lg mt-2">Mandatory Curriculum</h3>
+                    <p class="text-sm text-gray-600">Education for Sustainable Development (ESD/BNE) is now a required part of the curriculum, creating a nationwide need for our solution.</p>
                 </div>
             </div>
-            
-        </div>
+        </section>
 
-        <!-- Our Values Section -->
-        <section class="my-16">
-            <h2 class="text-3xl font-brand-heading text-center mb-12">Our Core Values</h2>
-            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto text-center">
-                <div class="bg-white rounded-xl shadow-sm overflow-hidden">
-                    <img src="https://placehold.co/600x400/fef08a/854d0e?text=Playful+Learning" alt="Child laughing while using an educational app on a tablet" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="font-bold text-xl mt-2">Playful Learning</h3>
-                        <p class="text-gray-600 mt-2">We believe education should be an adventure. Every lesson is a mission, and every achievement is a celebration.</p>
+        <!-- Proven Traction Section -->
+        <section class="bg-white rounded-2xl shadow-lg p-8 md:p-12 mb-20">
+            <h2 class="text-3xl font-brand-heading text-center mb-10">Proven Traction: The Duisburg Pilot</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-center">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="col-span-2">
+                            <img src="https://placehold.co/600x400/a7f3d0/166534?text=Kids+Engaged" alt="Children using the platform in a classroom" class="rounded-lg shadow-md">
+                            <p class="text-sm text-gray-500 mt-2">Engaged students in a Duisburg classroom.</p>
+                        </div>
+                        <div>
+                            <img src="https://placehold.co/400x300/bfdbfe/1e3a8a?text=Challenge+Done" alt="Completed challenge photo" class="rounded-lg shadow-md">
+                             <p class="text-sm text-gray-500 mt-2">A submitted 'Green Commute' challenge.</p>
+                        </div>
+                        <div>
+                            <img src="https://placehold.co/400x300/fef08a/854d0e?text=Happy+Teacher" alt="A teacher using the platform" class="rounded-lg shadow-md">
+                             <p class="text-sm text-gray-500 mt-2">Positive feedback from local educators.</p>
+                        </div>
                     </div>
+                    <blockquote class="mt-8 italic text-gray-600">
+                        "Guardians of the Planet is an innovative tool to teach our youngest citizens about sustainability in an exciting way."
+                        <span class="block font-bold mt-2 not-italic">– Fictional Quote, Mayor of Duisburg</span>
+                    </blockquote>
                 </div>
-                 <div class="bg-white rounded-xl shadow-sm overflow-hidden">
-                    <img src="https://placehold.co/600x400/a7f3d0/166534?text=Real+Impact" alt="Children planting a small tree in a park" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="font-bold text-xl mt-2">Real-World Impact</h3>
-                        <p class="text-gray-600 mt-2">We connect digital learning to tangible actions, empowering children to see the positive change they can make.</p>
-                    </div>
-                </div>
-                 <div class="bg-white rounded-xl shadow-sm overflow-hidden">
-                    <img src="https://placehold.co/600x400/bfdbfe/1e3a8a?text=Safety+First" alt="Parent smiling while watching a child use a tablet" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="font-bold text-xl mt-2">Safety First</h3>
-                        <p class="text-gray-600 mt-2">We are committed to providing a secure, ad-free, and positive environment where children can learn and explore safely.</p>
+                <div>
+                    <h3 class="text-2xl font-brand-heading text-gray-800 mb-6">Our model is validated. The results speak for themselves.</h3>
+                    <div class="space-y-6">
+                        <div class="kpi-card p-4 rounded-lg">
+                            <p class="font-bold text-4xl highlight">25+</p>
+                            <p class="text-gray-600 font-semibold">Schools Onboarded</p>
+                            <p class="text-sm text-gray-500">Successfully integrated into local school programs within the first quarter.</p>
+                        </div>
+                         <div class="kpi-card p-4 rounded-lg">
+                            <p class="font-bold text-4xl highlight">85%</p>
+                            <p class="text-gray-600 font-semibold">Positive Teacher Feedback</p>
+                            <p class="text-sm text-gray-500">Educators praise the platform for its ease of use and high student engagement.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Our Shared Vision Section -->
-        <section class="bg-blue-50 rounded-2xl p-8 md:p-12 my-16 text-center max-w-4xl mx-auto">
-             <h2 class="text-3xl font-brand-heading text-center mb-4 text-blue-800">Our Shared Vision</h2>
-             <blockquote class="text-xl italic text-gray-700">
-                "If we want a sustainable future, we have to start with the people who will live in it the longest — our children. We believe that by making global goals personal, playful, and actionable, we can empower a new generation to not just learn about the world, but to actively build a better one."
-             </blockquote>
+        <!-- Partnership Opportunities Section -->
+        <section class="mb-20">
+            <h2 class="text-3xl font-brand-heading text-center mb-10">How We Can Work Together</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-blue-50 rounded-xl p-8">
+                    <h3 class="font-brand-heading text-2xl text-blue-800">Seed Investment</h3>
+                    <p class="text-lg mt-2">We are currently raising a **€500,000 seed round** to scale our platform, expand our B2B sales team, and roll out localized content for 10 more major cities. This is an opportunity to get in on the ground floor of the future of sustainability education.</p>
+                </div>
+                 <div class="bg-green-50 rounded-xl p-8">
+                    <h3 class="font-brand-heading text-2xl text-green-800">Corporate & City Partnerships</h3>
+                    <p class="text-lg mt-2">Become a sponsoring partner like the City of Duisburg. Co-brand certificates, sponsor courses, and create custom challenges that align with your company's or city's sustainability goals. A powerful way to engage with the community and build your brand's reputation.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+             <h2 class="text-3xl font-brand-heading text-center mb-10">Let's Build the Future, Together.</h2>
+             <form action="#" method="POST" class="max-w-xl mx-auto">
+                <div class="grid grid-cols-1 gap-6">
+                    <input type="text" name="name" placeholder="Your Name" required class="block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                    <input type="email" name="email" placeholder="Your Email Address" required class="block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                    <input type="text" name="company" placeholder="Your Company / Organization" class="block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                    <textarea name="message" rows="4" placeholder="Your Message" required class="block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"></textarea>
+                    <div>
+                        <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-full text-lg hover:bg-blue-700 transition-colors">
+                            Request Information
+                        </button>
+                    </div>
+                </div>
+            </form>
         </section>
 
     </main>
@@ -184,10 +220,10 @@
                 <div>
                     <h4 class="font-brand-heading text-lg mb-4">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="../index.html#missions" class="text-gray-400 hover:text-white">Missions</a></li>
-                        <li><a href="../index.html#certification" class="text-gray-400 hover:text-white">Certifications</a></li>
-                        <li><a href="../index.html#partners" class="text-gray-400 hover:text-white">Partners</a></li>
-                        <li><a href="achievement.html" class="text-gray-400 hover:text-white">Your Achievements</a></li>
+                        <li><a href="#missions" class="text-gray-400 hover:text-white">Missions</a></li>
+                        <li><a href="#certification" class="text-gray-400 hover:text-white">Certifications</a></li>
+                        <li><a href="#partners" class="text-gray-400 hover:text-white">Partners</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Your Achievements</a></li>
                     </ul>
                 </div>
                 <!-- Support -->
@@ -199,7 +235,6 @@
                         <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
                     </ul>
                 </div>
-                <!-- About -->
                 <div>
                     <h4 class="font-brand-heading text-lg mb-4">About</h4>
                     <ul class="space-y-2">
